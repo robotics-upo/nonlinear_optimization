@@ -10,7 +10,7 @@ This package includes the catkinized version of the following well-known nonline
 The package also includes three use examples. For details about the API of each library please consult their web.
 
 ## General requirements
-The source code has been tested in ROS indigo with Ubuntu Lunux 16.04. However, no major requirements are needed except the software packages listed in #Dependencies 
+The source code has been tested in ROS indigo with Ubuntu Lunux 16.04. However, no major requirements are needed except the software packages listed in Dependencies 
 
 ## Dependencies
 The following linux software packages are required for compilation:
