@@ -8,7 +8,7 @@ This package includes the catkinized version of the following well-known nonline
 * *cvsba* (https://www.uco.es/investiga/grupos/ava/node/39) a bundle adjutment library with direct integration with openCV
 
 ## General requirements
-The source code has been tested in ROS indigo with Ubuntu Lunux 16.04. However, no major requirements are needed except the softwar packages listed in Dependencies 
+The source code has been tested in ROS indigo with Ubuntu Lunux 16.04. However, no major requirements are needed except the software packages listed in #Dependencies 
 
 ## Dependencies
 The following linux software packages are required for compilation:
@@ -17,7 +17,7 @@ The following linux software packages are required for compilation:
 * liblapack-dev
 * libblas-dev
 
-You can install easily with apt-get install
+They can be easily installed with "sudo apt-get install libsuitesparse-metis-dev libsuperlu3-dev liblapack-dev libblas-dev"
 
 ## Compilation
 In order to build the package, clone it to the *src* directory of your Catkin workspace and compile it by using *catkin_make* as normal.
