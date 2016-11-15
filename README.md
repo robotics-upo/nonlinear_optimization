@@ -22,5 +22,5 @@ The following linux software packages are required for compilation:
 They can be easily installed with "sudo apt-get install libsuitesparse-metis-dev libsuperlu3-dev liblapack-dev libblas-dev"
 
 ## Compilation
-In order to build the package, clone it to the *src* directory of your Catkin workspace and compile it by using *catkin_make* as normal.
+In order to build the package, clone it to the *src* directory of your Catkin workspace and compile it by using *catkin_make* as usual.
 
