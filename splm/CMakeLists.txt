@@ -57,13 +57,6 @@ ELSE()
   message(STATUS "cholmod = ${CHOLMOD_LIB}")
 ENDIF()
 
-find_library(SUPERLU_LIB NAMES superlu)
-IF(${SUPERLU_LIB} STREQUAL "SUPERLU_LIB-NOTFOUND")
-  message(FATAL_ERROR "superlu library  not found")
-ELSE()
-  message(STATUS "superlu = ${SUPERLU_LIB}")
-ENDIF()
-
 find_library(UMFPACK_LIB NAMES umfpack)
 IF(${UMFPACK_LIB} STREQUAL "UMFPACK_LIB-NOTFOUND")
   message(FATAL_ERROR "umfpack library  not found")
@@ -98,14 +91,14 @@ IF(${AMD_LIB} STREQUAL "AMD_LIB-NOTFOUND")
 ELSE()
   message(STATUS "amd = ${AMD_LIB}")
 ENDIF()
-
+ 
 
 ###################################
 ## catkin specific configuration ##
 ###################################
 catkin_package(
   INCLUDE_DIRS include
-  LIBRARIES splm lapack blas m cxsparse metis ldl cholmod superlu umfpack ccolamd colamd camd amd
+  LIBRARIES splm lapack blas m cxsparse metis ldl cholmod umfpack ccolamd colamd camd amd
   CATKIN_DEPENDS roscpp
 )
 
@@ -116,15 +109,14 @@ catkin_package(
 include_directories(
   ${catkin_INCLUDE_DIRS}
   /usr/include/suitesparse
-  /usr/include/superlu
 )
 
-add_definitions(-DHAVE_CSPARSE -DHAVE_LDL -DHAVE_CHOLMOD -DHAVE_SuperLU -DHAVE_UMFPACK)
+add_definitions(-DHAVE_CSPARSE -DHAVE_LDL -DHAVE_CHOLMOD -DHAVE_UMFPACK)
 
 add_library(splm SHARED
   src/compiler.h src/splm.h src/splm_priv.h
   src/splm.c src/splm_crsm.c src/splm_ccsm.c src/splm_hessian.c src/splm_time.c src/splm_stm.c src/splm_misc.c
-  src/splm_csparse.c src/splm_ldlp.c src/splm_cholmod.c src/splm_superlu.c src/splm_umfpack.c 
+  src/splm_csparse.c src/splm_ldlp.c src/splm_cholmod.c src/splm_umfpack.c 
 )
 
 target_link_libraries(splm

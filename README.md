@@ -10,16 +10,17 @@ This package includes the catkinized version of the following well-known nonline
 The package also includes three use examples. For details about the API of each library please consult their web.
 
 ## General requirements
-The source code has been tested in ROS indigo with Ubuntu Lunux 16.04. However, no major requirements are needed except the software packages listed in Dependencies 
+The source code has been tested in ROS kinectic with Ubuntu Linux 16.04. However, no major requirements are needed except the software packages listed in Dependencies 
 
 ## Dependencies
 The following linux software packages are required for compilation:
-* libsuitesparse-metis-dev
-* libsuperlu3-dev
+* libsuitesparse-dev
+* libmetis-dev
+* libsuperlu-dev
 * liblapack-dev
 * libblas-dev
 
-They can be easily installed with "sudo apt-get install libsuitesparse-metis-dev libsuperlu3-dev liblapack-dev libblas-dev"
+They can be easily installed with "sudo apt-get install libsuitesparse-dev libmetis-dev libsuperlu-dev liblapack-dev libblas-dev"
 
 ## Compilation
 In order to build the package, clone it to the *src* directory of your Catkin workspace and compile it by using *catkin_make* as usual.
